@@ -1,0 +1,43 @@
+{
+  "devices": {
+    "SMART_AGRICULTURE_001": {
+      "device_id": "SMART_AGRICULTURE_001",
+      "plant_name": "Padi Ciherang",
+      "sensor_data": {
+        "temperature_c": 28.1,
+        "humidity_pct": 72.2,
+        "soil_moisture_pct": 65,
+        "timestamp": 1726165655
+      },
+      "control_status": {
+        "pump": "off",
+        "manual_schedule": {
+          "enabled": true,
+          "time": "07:00",
+          "updated_at": 1726165600
+        },
+        "manual_trigger": {
+          "active": false,
+          "duration_sec": 10,
+          "requested_at": 1726165600
+        }
+      },
+      "last_seen": 1726165655,
+      "history": {
+        "-Nv123A": {
+          "mode": "auto",
+          "started_at": 1726165000,
+          "duration_sec": 10,
+          "soil_before": 34,
+          "soil_after": 48
+        }
+      },
+      "wifi_config": {
+        "ssid": "FarmWifi",
+        "password": "********",
+        "updated_at": 1726165500
+      },
+      "updated_at": 1726165655
+    }
+  }
+}

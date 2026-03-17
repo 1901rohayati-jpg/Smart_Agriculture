@@ -1,0 +1,26 @@
+{
+  "rules": {
+    "devices": {
+      "$device_id": {
+        ".read": "auth != null && auth.token.device_id == $device_id",
+        ".write": "auth != null && auth.token.device_id == $device_id",
+        "plant_name": {
+          ".validate": "newData.isString() && newData.val().length <= 100"
+        },
+        "last_seen": {
+          ".validate": "newData.isNumber()"
+        },
+        "sensor_data": {
+          ".validate": "newData.hasChildren(['temperature_c','humidity_pct','soil_moisture_pct','timestamp'])"
+        },
+        "control_status": {
+          "manual_schedule": {
+            "time": {
+              ".validate": "newData.isString() && newData.val().matches(/^(?:[01]\\d|2[0-3]):[0-5]\\d$/)"
+            }
+          }
+        }
+      }
+    }
+  }
+}
